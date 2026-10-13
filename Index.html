@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metaetiquetas SEO obligatorias -->
+    <meta name="description" content="Sabor Marino - El mejor restaurante de pescados, mariscos y comida criolla en Lima.">
+    <meta name="keywords" content="cevicheria, restaurante peruano, comida marina, cebiche, lima peru, sabor marino">
+    <title>Sabor Marino | Cevichería & Restaurante Criollo</title>
+    
+    <!-- Vinculación a CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilos internos directos -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f9ff;
+            color: #0f172a;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        /* CABECERA Y NAVEGACIÓN */
+        @keyframes entradaEmpresa {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #header-principal {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+            animation: entradaEmpresa 0.8s ease-out;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logo {
+            float: left;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        #logo span {
+            color: #fef08a;
+        }
+
+        #menu-navegacion {
+            float: right;
+            margin-top: 5px;
+        }
+
+        #menu-navegacion ul {
+            list-style: none;
+        }
+
+        #menu-navegacion ul li {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .enlace-nav {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .enlace-nav:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: #fef08a;
+            transform: translateY(-2px);
+        }
+
+        /* HERO PRINCIPAL */
+        .hero-seccion {
+            background: linear-gradient(180deg, #0284c7 0%, #0e7490 100%);
+            color: #ffffff;
+            padding: 50px 0 60px 0;
+            text-align: center;
+            border-bottom: 5px solid #f59e0b;
+        }
+
+        .hero-seccion h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-seccion p {
+            font-size: 18px;
+            color: #e0f2fe;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .imagen-hero-contenedor {
+            margin: 25px auto 20px auto;
+            max-width: 520px;
+        }
+
+        .img-platillo {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-platillo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 14px 36px;
+            background-color: #f59e0b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 17px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: #d97706;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(217, 119, 6, 0.5);
+        }
+
+        /* SECCIÓN MULTIMEDIA FLOTANTE */
+        .seccion-bloques {
+            padding: 55px 0;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #0369a1;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .caja-flotante {
+            background-color: #ffffff;
+            padding: 28px;
+            border-radius: 16px;
+            border-top: 5px solid #0284c7;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .caja-flotante:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(2, 132, 199, 0.15);
+        }
+
+        .columna-izquierda {
+            float: left;
+            width: 48%;
+        }
+
+        .columna-derecha {
+            float: right;
+            width: 48%;
+        }
+
+        .reproductor-contenedor, .iframe-contenedor {
+            margin-top: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 230px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /* SECCIÓN MENÚ Y DECORACIÓN */
+        .seccion-menu {
+            background-color: #e0f2fe;
+            padding: 55px 0;
+            border-top: 2px dashed #bae6fd;
+        }
+
+        .tarjeta-menu {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+        }
+
+        .tarjeta-menu h4 {
+            color: #0369a1;
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 3px solid #38bdf8;
+            padding-bottom: 6px;
+        }
+
+        .lista-platillos {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista-platillos li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+
+        .precio {
+            font-weight: 700;
+            color: #d97706;
+        }
+
+        .img-decorativa {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 18px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .img-decorativa:hover {
+            transform: scale(1.02);
+        }
+
+        /* PIE DE PÁGINA */
+        #footer-principal {
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 45px 0 20px 0;
+            border-top: 4px solid #0284c7;
+            margin-top: 40px;
+        }
+
+        .columna-footer {
+            float: left;
+            width: 31%;
+            margin-right: 3.3%;
+        }
+
+        .columna-footer:last-child {
+            margin-right: 0;
+        }
+
+        .columna-footer h4 {
+            color: #38bdf8;
+            margin-bottom: 14px;
+            font-size: 18px;
+        }
+
+        .columna-footer p, .columna-footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .columna-footer a:hover {
+            color: #fef08a;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* MEDIA QUERIES (< 768px) */
+        @media (max-width: 768px) {
+            #logo, #menu-navegacion {
+                float: none;
+                text-align: center;
+            }
+
+            #menu-navegacion ul {
+                margin-top: 15px;
+            }
+
+            #menu-navegacion ul li {
+                margin: 0 5px;
+            }
+
+            .columna-izquierda, .columna-derecha, .columna-footer {
+                float: none;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+
+            .hero-seccion h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA DEL RESTAURANTE -->
+    <header id="header-principal">
+        <div class="contenedor">
+            <h1 id="logo">Sabor<span>Marino</span></h1>
+            <nav id="menu-navegacion">
+                <ul>
+                    <li><a href="#inicio" class="enlace-nav">Inicio</a></li>
+                    <li><a href="#menu" class="enlace-nav">Carta & Menú</a></li>
+                    <li><a href="#multimedia" class="enlace-nav">Multimedia</a></li>
+                    <li><a href="#contacto" class="enlace-nav">Reservaciones</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- HERO PRINCIPAL -->
+        <section id="inicio" class="hero-seccion">
+            <div class="contenedor">
+                <h2>El Verdadero Sabor del Mar en tu Mesa</h2>
+                <p>Disfruta de nuestros ceviches frescos, arroz con mariscos y lo mejor de la comida criolla peruana.</p>
+                
+                <!-- RUTA APUNTANDO A LA CARPETA imagenes/ -->
+                <div class="imagen-hero-contenedor">
+                    <img src="imagenes/ceviche.jpg" alt="Ronda Marina con Ceviche y Arroz con Mariscos" class="img-platillo">
+                </div>
+
+                <a href="#menu" class="btn-cta">Ver Menú Completo</a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE MULTIMEDIA -->
+        <section id="multimedia" class="seccion-bloques">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Experiencia Gastronómica & Multimedia</h2>
+                
+                <!-- COLUMNA IZQUIERDA: AUDIO -->
+                <div class="caja-flotante columna-izquierda">
+                    <h3>Spot Radial & Ambientación</h3>
+                    <p>Escucha nuestra sugerencia del chef y la ambientación musical de nuestro restaurante:</p>
+                    <div class="reproductor-contenedor">
+                        <audio controls>
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el reproductor de audio.
+                        </audio>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: VIDEO -->
+                <div class="caja-flotante columna-derecha">
+                    <h3>Nuestros Platillos en Acción</h3>
+                    <p>Conoce la preparación de los mejores platos típicos de la gastronomía peruana:</p>
+                    <div class="iframe-contenedor">
+                        <iframe 
+                            src="https://www.youtube.com/embed/j9_fUBr512Q" 
+                            title="Gastronomia Peruana" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE MENÚ CON FOTOS EN imagenes/ -->
+        <section id="menu" class="seccion-menu">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Especialidades de la Casa & Nuestros Chefs</h2>
+                
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="columna-izquierda">
+                    <div class="tarjeta-menu">
+                        <h4>Platos de la Casa (Marinos)</h4>
+                        <ul class="lista-platillos">
+                            <li><span>Ceviche Clásico de Pesca del Día</span> <span class="precio">S/ 35.00</span></li>
+                            <li><span>Arroz con Mariscos a la Chalaca</span> <span class="precio">S/ 38.00</span></li>
+                            <li><span>Chicharrón de Calamar & Pescado</span> <span class="precio">S/ 32.00</span></li>
+                            <li><span>Leche de Pantera Especial</span> <span class="precio">S/ 22.00</span></li>
+                        </ul>
+                        <!-- RUTA A LA CARPETA imagenes/ -->
+                        <img src="imagenes/mas platillos.jpg" alt="Dúo Marino y Causa Rellena" class="img-decorativa">
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="columna-derecha">
+                    <div class="tarjeta-menu">
+                        <h4>Bebidas & Garantía de Calidad</h4>
+                        <ul class="lista-platillos">
+                            <li><span>Chicha Morada Artesanal (1L)</span> <span class="precio">S/ 15.00</span></li>
+                            <li><span>Limonada Frozen con Hierba Buena</span> <span class="precio">S/ 14.00</span></li>
+                            <li><span>Causa Rellena de Langostinos</span> <span class="precio">S/ 25.00</span></li>
+                        </ul>
+                        <!-- RUTA A LA CARPETA imagenes/ -->
+                        <img src="imagenes/nuestros chefts.jpg" alt="Chef preparando Ceviche en cocina" class="img-decorativa">
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer-principal">
+        <div class="contenedor" id="contacto">
+            
+            <div class="columna-footer">
+                <h4>Reservaciones Directas</h4>
+                <p><strong>Teléfono Fijo:</strong> (01) 456-7890</p>
+                <p><strong>WhatsApp / Pedidos:</strong> +51 994 138 171</p>
+                <p><strong>Central de Reservas:</strong> +51 987 654 321</p>
+            </div>
+
+            <div class="columna-footer">
+                <h4>Síguenos en Redes</h4>
+                <a href="https://facebook.com" target="_blank">Facebook: /SaborMarinoPeru</a>
+                <a href="https://instagram.com" target="_blank">Instagram: @sabormarino.pe</a>
+                <a href="https://tiktok.com" target="_blank">TikTok: @sabormarinoperu</a>
+            </div>
+
+            <div class="columna-footer">
+                <h4>Ubicación & Horario</h4>
+                <p>Av. Nueva York 356, Chorrillos</p>
+                <p>Lima - Perú</p>
+                <p>Mar - Dom / 11:00 AM - 6:00 PM</p>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Sabor Marino Restaurante S.A.C. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
