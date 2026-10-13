@@ -1,0 +1,328 @@
+/* RESETEO Y CONFIGURACIÓN GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f9ff;
+    color: #0f172a;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* ANIMACIÓN Y NAVEGACIÓN HEADER */
+@keyframes entradaEmpresa {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#header-principal {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+    animation: entradaEmpresa 0.8s ease-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    float: left;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+#logo span {
+    color: #fef08a;
+}
+
+#menu-navegacion {
+    float: right;
+    margin-top: 5px;
+}
+
+#menu-navegacion ul {
+    list-style: none;
+}
+
+#menu-navegacion ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.enlace-nav {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.enlace-nav:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fef08a;
+    transform: translateY(-2px);
+}
+
+/* HERO PRINCIPAL */
+.hero-seccion {
+    background: linear-gradient(180deg, #0284c7 0%, #0e7490 100%);
+    color: #ffffff;
+    padding: 50px 0 60px 0;
+    text-align: center;
+    border-bottom: 5px solid #f59e0b;
+}
+
+.hero-seccion h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-seccion p {
+    font-size: 18px;
+    color: #e0f2fe;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.imagen-hero-contenedor {
+    margin: 25px auto 20px auto;
+    max-width: 520px;
+}
+
+.img-platillo {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-platillo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #f59e0b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.45);
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #d97706;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.5);
+}
+
+/* MAQUETACIÓN EN DOS COLUMNAS FLOTANTES */
+.seccion-bloques {
+    padding: 55px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0369a1;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.caja-flotante {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    border-top: 5px solid #0284c7;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-flotante:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(2, 132, 199, 0.15);
+}
+
+.columna-izquierda {
+    float: left;
+    width: 48%;
+}
+
+.columna-derecha {
+    float: right;
+    width: 48%;
+}
+
+.reproductor-contenedor, .iframe-contenedor {
+    margin-top: 15px;
+}
+
+iframe {
+    width: 100%;
+    height: 230px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+audio {
+    width: 100%;
+}
+
+/* SECCIÓN MENÚ Y TARJETAS DE MÁS PLATILLOS */
+.seccion-menu {
+    background-color: #e0f2fe;
+    padding: 55px 0;
+    border-top: 2px dashed #bae6fd;
+}
+
+.tarjeta-menu {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.tarjeta-menu h4 {
+    color: #0369a1;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #38bdf8;
+    padding-bottom: 6px;
+}
+
+.lista-platillos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-platillos li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.precio {
+    font-weight: 700;
+    color: #d97706;
+}
+
+.img-decorativa {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 18px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.img-decorativa:hover {
+    transform: scale(1.02);
+}
+
+/* PIE DE PÁGINA TRIPLE COLUMNA */
+#footer-principal {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 45px 0 20px 0;
+    border-top: 4px solid #0284c7;
+    margin-top: 40px;
+}
+
+.columna-footer {
+    float: left;
+    width: 31%;
+    margin-right: 3.3%;
+}
+
+.columna-footer:last-child {
+    margin-right: 0;
+}
+
+.columna-footer h4 {
+    color: #38bdf8;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.columna-footer p, .columna-footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.columna-footer a:hover {
+    color: #fef08a;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* MEDIA QUERIES PARA ADAPTABILIDAD RESPONSIVA */
+@media (max-width: 768px) {
+    #logo, #menu-navegacion {
+        float: none;
+        text-align: center;
+    }
+
+    #menu-navegacion ul {
+        margin-top: 15px;
+    }
+
+    #menu-navegacion ul li {
+        margin: 0 5px;
+    }
+
+    .columna-izquierda, .columna-derecha, .columna-footer {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .hero-seccion h2 {
+        font-size: 28px;
+    }
+}
